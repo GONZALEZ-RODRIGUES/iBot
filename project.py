@@ -1,5 +1,4 @@
 from currency_converter import CurrencyConverter
-from typing import Final
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes, ConversationHandler
 from dotenv import load_dotenv
@@ -8,8 +7,8 @@ import os
 load_dotenv()
 
 c = CurrencyConverter()
-TOKEN: Final = os.environ.get('TELEGRAM_TOKEN')
-BOT_USERNAME: Final = os.environ.get('BOT_NAME')
+TOKEN = os.environ.get('TELEGRAM_TOKEN')
+BOT_USERNAME = os.environ.get('BOT_NAME')
 SELECT_AMOUNT = 0
 SELECT_SOURCE_CURRENCY = 1
 SELECT_TARGET_CURRENCY = 2
